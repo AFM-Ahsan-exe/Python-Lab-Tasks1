@@ -11,11 +11,12 @@ Mathematical and logic-based problems
 Algorithm development exercises
 Basic AI-related programming tasks
 Data processing and computation fundamentals
+
 🧠 Core Concepts Practiced
 Conditional statements and decision-making (if-else)
 Iterative logic using loops (for, while)
 Algorithm design and optimization thinking
 Problem decomposition and step-by-step logic building
-🎯 Purpose
 
+🎯 Purpose
 To build a strong foundation in programming and computational thinking required for advanced topics in Artificial Intelligence, machine learning, and software development.
