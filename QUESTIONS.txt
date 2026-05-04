@@ -1,0 +1,58 @@
+Name: Ahsan Ahmad
+Reg: No: FA24-BCS-068
+Questions:
+1. Why do we import heapq?
+Answer:
+We import heapq to use a priority queue (min-heap). It ensures that the node with the lowest cost
+is always processed first, which is essential for UCS.
+2. Why do we use a priority queue instead of a normal queue?
+Answer:
+Because UCS must always expand the least cost path first, not the first-in-first-out order like a
+normal queue.
+3. Why do we store (cost, node, path) in the queue?
+Answer:
+• cost → to compare paths
+• node → current position
+• path → to track the route
+This helps us find both optimal cost and actual path.
+4. Why do we use heapq.heappop()?
+Answer:
+It removes the element with the smallest cost, ensuring UCS always explores the cheapest path
+first.
+5. Why do we use a dictionary called visited?
+Answer:
+To store the minimum cost at which each node is visited, so we avoid processing worse (more
+expensive) paths again.
+6. Why do we check if node in visited and visited[node] <= cost?
+Answer:
+To skip processing if we already reached this node with a cheaper or equal cost before.
+7. Why do we update visited[node] = cost?
+Answer:
+To record the best (lowest) cost at which we reached that node.
+8. Why do we append path = path + [node]?
+Answer:
+To maintain the actual path from start to current node step by step.
+9. Why do we check if node == goal?
+Answer:
+This is the goal test. If we reach the target node, we immediately return the result.
+10. Why do we expand neighbours using graph[node]?
+Answer:
+Because it gives all connected nodes and their edge costs, allowing UCS to explore possible
+paths.
+11. Why do we calculate cost + weight?
+Answer:
+To compute the total path cost from start to neighbour node.
+12. Why do we use recursion-like path building instead of global path?
+Answer:
+Because each queue entry keeps its own path, ensuring correct path tracking for each branch.
+13. Why do we return float("inf") if goal is not found?
+Answer:
+It represents no valid path exists (infinite cost).
+14. Why is UCS considered optimal?
+Answer:
+Because it always expands the lowest cumulative cost path first, guaranteeing the cheapest
+solution.
+15. Why is UCS different from BFS?
+Answer:
+• BFS ignores cost and uses levels
+• UCS considers actual path cost, making it suitable for weighted graphs
